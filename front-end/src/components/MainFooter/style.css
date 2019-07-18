@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  background-color: orange;
+}
+
+footer > #info {
+  background-color: red;
+}
+
+footer > #links {
+  background-color: blue;
+}

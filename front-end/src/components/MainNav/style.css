@@ -1,0 +1,56 @@
+nav#main-nav {
+  height: 8rem;
+  width: 100%;
+  background-color: orange;
+  color: white;
+  margin: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  -webkit-box-shadow: 0px -3px 20px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px -3px 20px 0px rgba(50,50,50,0.75);
+  box-shadow: 0px -3px 20px 0px rgba(50,50,50,0.75);
+  z-index: 100;
+}
+
+#main-nav > ul {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#main-nav > ul > li {
+  height: 100%;
+  min-width: 5rem;
+  padding: 0 0.5rem 0 0.5rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all linear 0.125s;
+}
+
+#main-nav > ul > li:hover {
+  height: calc(100% - 4px);
+  border-bottom: 4px solid white;
+  background-color: #cc8400;
+  transition: all linear 0.125s;
+}
+
+#main-nav::before {
+  content: "Ragged Mountain Resort";
+  width: 100%;
+  color: orange;
+  position: absolute;
+  text-align: center;
+  top: -47px;
+  text-transform: uppercase;
+  font-family: serif;
+  font-size: 325%;
+}

@@ -1,0 +1,152 @@
+/* CALL TO ACTION */
+#call-to-action {
+  position: relative;
+  z-index: -5;
+}
+
+#call-to-action .btn {
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  text-transform: uppercase;
+  font-size: 200%;
+  font-weight: 600;
+}
+
+#call-to-action .btn:nth-child(2) {
+  background-color: white;
+}
+
+/* BLOG */
+#blog {
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(50,50,50,0.5);
+  box-shadow: 0px 0px 20px 0px rgba(50,50,50,0.5);
+}
+
+#blog .side-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-color: orange;
+}
+
+#blog .side-bar .content {
+  display: block;
+  min-height: 25rem;
+  padding: 1rem;
+}
+
+#blog .side-bar .content .label {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  text-align: right;
+  letter-spacing: 2px;
+  font-size: 175%;
+  font-weight: 600;
+  color: white;
+}
+
+#blog .side-bar .content button {
+  background: transparent;
+  border: white solid 2px;
+  padding: 0.65rem 3rem;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 1rem;
+}
+
+#blog .side-bar .content button:hover {
+  background-color: white;
+  color: black;
+}
+
+#blog .featured-post {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: lightgray;
+}
+
+#blog .featured-post .content {
+  margin: 5rem 3rem 3rem 3rem;
+  color: #2a2a2a;
+}
+
+#blog .featured-post .content p {
+  letter-spacing: 1px;
+}
+
+#blog .featured-post .content button {
+  background: transparent;
+  border: #2a2a2a solid 2px;
+  padding: 0.65rem 3rem;
+  color: #2a2a2a;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  float: right;
+}
+
+#blog .featured-post .content button:hover {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+/* KEYNOTE */
+#keynote .side-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: orange; 
+}
+
+#keynote .side-bar .content {
+  display: block;
+  min-height: 25rem;
+  padding: 1rem;
+}
+
+#keynote .side-bar .content .label {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  text-align: right;
+  letter-spacing: 2px;
+  font-size: 175%;
+  font-weight: 600;
+  color: white;
+}
+
+#keynote .side-bar .content button {
+  background: transparent;
+  border: white solid 2px;
+  padding: 0.65rem 3rem;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 1rem;
+}
+
+#keynote .side-bar .content button:hover {
+  background-color: white;
+  color: black;
+}
+
+#keynote .keynote-body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#keynote .keynote-body .content {
+  margin: 5rem 3rem 3rem 3rem;
+  color: #2a2a2a;
+}
+
+#keynote .keynote-body .content p {
+  letter-spacing: 1px;
+}

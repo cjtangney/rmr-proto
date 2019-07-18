@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+    <!-- pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <title>React App</title>
+
+    <style>
+      /* overrides */
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+      }
+
+      /* scroll-bar styles */
+      ::-webkit-scrollbar {
+        width: 4px;
+        height: 2px;
+      }
+      ::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e1e1e1;
+        border: 0px none #ffffff;
+        border-radius: 0px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #666666;
+        border: 0px none #ffffff;
+        border-radius: 0px;
+      }
+      ::-webkit-scrollbar-corner {
+        background: transparent;
+      }
+      :root {
+        --nav-width: 15rem;
+        --gutter: 1rem;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ffffff;
+      }
+      ::-webkit-scrollbar-thumb:active {
+        background: #000000;
+      }
+      ::-webkit-scrollbar-track:hover {
+        background: #666666;
+      }
+      ::-webkit-scrollbar-track:active {
+        background: #333333;
+      }
+    </style>
+
+    <!-- analytics scripts n such -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

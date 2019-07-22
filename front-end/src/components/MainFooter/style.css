@@ -1,12 +1,67 @@
 footer {
+  position: relative;
+  height: 8rem;
   display: flex;
+  align-content: center;
   background-color: orange;
+  color: white;
+  -webkit-box-shadow: 0px -5px 20px 0px rgba(50,50,50,0.5);
+  -moz-box-shadow: 0px -5px 20px 0px rgba(50,50,50,0.5);
+  box-shadow: 0px -5px 20px 0px rgba(50,50,50,0.5);
 }
 
 footer > #info {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+footer > #info > .label {
+  margin: 0 0 1rem 0;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+footer > #info > ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer > #info > ul > li {
+  display: inline;
+  padding-right: 1rem;
+  margin-left: 1rem;
+  border-right: solid 2px white;
+}
+
+footer > #info > ul > li:first-child {
+  margin-left: 0;
+}
+
+footer > #info > ul > li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border: none;
 }
 
 footer > #links {
-  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+footer > #links > ul {
+  padding: 0;
+}
+
+footer > #links > ul > li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+footer > #links > ul > li:last-child {
+  margin-right: 0;
 }

@@ -14,6 +14,11 @@ nav#main-nav {
   z-index: 100;
 }
 
+nav#main-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #main-nav > ul {
   height: 100%;
   width: 100%;
@@ -70,12 +75,12 @@ nav#main-nav {
   -webkit-transition: max-height ease 0.5s;
 }
 
-#main-nav > ul > li > ul.sub > li {
+#main-nav > ul > li > ul.sub > a > li {
   padding: 0.5rem 2rem;
   margin: 1rem auto;
 }
 
-#main-nav > ul > li > ul.sub > li:hover {
+#main-nav > ul > li > ul.sub > a > li:hover {
   background-color: lightgray;
 }
 

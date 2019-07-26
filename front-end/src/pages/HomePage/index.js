@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Directions from '../../components/Directions';
+
 import './style.css';
 
 /**
@@ -63,9 +66,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className='pure-g' id='directions'>
-
-      </section>
+      <Directions layout='directions-right' />
     </div>  
   );
 };

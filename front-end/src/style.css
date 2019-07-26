@@ -1,6 +1,24 @@
 /* this file is for GLOBAL CSS ONLY */
 
-/* text helpers */
-.text-left { text-align: left; }
+/* text position helpers */
+.text-left { text-align: left; } 
+
 .text-center { text-align: center; }
+
 .text-right { text-align: right; }
+
+/* font-weight helpers */
+p.b, span.b { 
+  font-weight: 600; 
+}
+
+/* default link style */
+a {
+  font-weight: 600;
+  color: #e46b00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff9639;
+}

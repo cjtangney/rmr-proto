@@ -1,6 +1,8 @@
 footer {
   position: relative;
-  height: 8rem;
+  min-height: 8rem;
+  height: 100%;
+  padding-top: 1rem;
   display: flex;
   align-content: center;
   background-color: orange;

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ScrollToTop from '../../../components/ScrollToTop';
+
 import './style.css';
 
 /**
@@ -21,65 +23,83 @@ import './style.css';
 
 export default function SnowReportPage(props) {
   const { trails, lifts } = props;
+  let trailCount = 0;
+  let easyGroomerTrails = [];
+  let intermediateGroomerTrails = [];
+  let advancedGroomerTrails = [];
+  let intermediateGladeTrails = [];
+  let advancedGladeTrails = [];
+  let expertGladeTrails = [];
+  let easyParkTrails = [];
+  let intermediateParkTrails = [];
 
-  const easyGroomerTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'easy' && 
-    trail.trailType.toLowerCase() === 'groomer'
-  );
-  
-  const intermediateGroomerTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'intermediate' &&
-    trail.trailType.toLowerCase() === 'groomer'
-  );
+  trails.forEach(trail => {
+    switch(trail.difficulty.toLowerCase()) {
+      case('easy'): {
+        switch(trail.trailType.toLowerCase()) {
+          case('groomer'): {
+            easyGroomerTrails.push(trail);
+            if (trail.status === 1) trailCount += 1;
+            break;
+          }
+          case('park'): {
+            easyParkTrails.push(trail);
+            if (trail.status === 1) trailCount += 1;
+            break;
+          }
+        }
+        break;
+      }
+      case('intermediate'): {
+        switch(trail.trailType.toLowerCase()) {
+          case('groomer'): {
+            intermediateGroomerTrails.push(trail);
+            if (trail.status === 1) trailCount += 1;
+            break;
+          }
+          case('glade'): {
+            intermediateGladeTrails.push(trail);
+            if (trail.status === 1) trailCount += 1;
+            break;
+          }
+          case('park'): {
+            intermediateParkTrails.push(trail);
+            if (trail.status === 1) trailCount += 1;
+            break;
+          }
+        }
+        break;
+      }
+      case('advanced'): {
+        switch(trail.trailType.toLowerCase()) {
+          case('groomer'): {
+            advancedGroomerTrails.push(trail);
+            if (trail.status === 1) trailCount += 1;
+            break;
+          }
+          case('glade'): {
+            advancedGladeTrails.push(trail);
+            if (trail.status === 1) trailCount += 1;
+            break;
+          }
+        }
+        break;
+      }
+      case('expert'): {
+        switch(trail.trailType.toLowerCase()) {
+          case('glade'): {
+            expertGladeTrails.push(trail);
+            if (trail.status === 1) trailCount += 1;
+            break;
+          }
+        }
+        break;
+      }
+    }
+  });
 
-  const advancedGroomerTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'advanced' &&
-    trail.trailType.toLowerCase() === 'groomer'
-  );
-
-  const expertGroomerTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'expert' &&
-    trail.trailType.toLowerCase() === 'groomer'
-  );
-
-  const easyGladeTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'easy' &&
-    trail.trailType.toLowerCase() === 'glade'
-  );
-
-  const intermediateGladeTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'intermediate' &&
-    trail.trailType.toLowerCase() === 'glade'
-  );
-
-  const advancedGladeTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'advanced' &&
-    trail.trailType.toLowerCase() === 'glade'
-  );
-
-  const expertGladeTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'expert' &&
-    trail.trailType.toLowerCase() === 'glade'
-  );
-
-  const easyParkTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'easy' &&
-    trail.trailType.toLowerCase() === 'park'
-  );
-
-  const intermediateParkTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'intermediate' &&
-    trail.trailType.toLowerCase() === 'park'
-  );
-
-  const advancedParkTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'advanced' &&
-    trail.trailType.toLowerCase() === 'park'
-  );
-
-  const expertParkTrails = trails.filter(trail => 
-    trail.difficulty.toLowerCase() === 'expert' &&
-    trail.trailType.toLowerCase() === 'park'
+  const openLifts = lifts.filter(lift => 
+    lift.status.toLowerCase() === 'open'
   );
 
   return (
@@ -94,11 +114,11 @@ export default function SnowReportPage(props) {
         </div>
         <div className='pure-u-1 pure-u-lg-1-4 header default-shadow'>
           <h2>Trails Open</h2>
-          <p>0</p>
+          <p>{trailCount}</p>
         </div>
         <div className='pure-u-1 pure-u-lg-1-4 header default-shadow'>
           <h2>Lifts Open</h2>
-          <p>0</p>
+          <p>{openLifts.length}</p>
         </div>
         {/* <div className='pure-u-1 report-text'>
           <p>The "Last Chair" signs have reached the top of the chairlifts, and we are now closed for the 2018-19 winter season.</p>
@@ -119,7 +139,9 @@ export default function SnowReportPage(props) {
               easyGroomerTrails.map(trail => (
                 <div className='pure-u-1 pure-u-md-1-3 trail'>
                   <span className='trail-name'>{trail.trailName}</span>
-                  <span className='trail-status'>{trail.status === 1 ? 'Open' : 'Closed'}</span>
+                  <span className={trail.status === 1 ? 'trail-status open' : 'trail-status closed'}>
+                    {trail.status === 1 ? 'Open' : 'Closed'}
+                  </span>
                 </div>
               ))
             }
@@ -132,7 +154,9 @@ export default function SnowReportPage(props) {
               intermediateGroomerTrails.map(trail => (
                 <div className='pure-u-1 pure-u-md-1-3 trail'>
                   <span className='trail-name'>{trail.trailName}</span>
-                  <span className='trail-status'>{trail.status === 1 ? 'Open' : 'Closed'}</span>
+                  <span className={trail.status === 1 ? 'trail-status open' : 'trail-status closed'}>
+                    {trail.status === 1 ? 'Open' : 'Closed'}
+                  </span>
                 </div>
               ))
             }
@@ -145,7 +169,9 @@ export default function SnowReportPage(props) {
               advancedGroomerTrails.map(trail => (
                 <div className='pure-u-1 pure-u-md-1-3 trail'>
                   <span className='trail-name'>{trail.trailName}</span>
-                  <span className='trail-status'>{trail.status === 1 ? 'Open' : 'Closed'}</span>
+                  <span className={trail.status === 1 ? 'trail-status open' : 'trail-status closed'}>
+                    {trail.status === 1 ? 'Open' : 'Closed'}
+                  </span>
                 </div>
               ))
             }
@@ -164,7 +190,9 @@ export default function SnowReportPage(props) {
               intermediateGladeTrails.map(trail => (
                 <div className='pure-u-1 pure-u-md-1-3 trail'>
                   <span className='trail-name'>{trail.trailName}</span>
-                  <span className='trail-status'>{trail.status === 1 ? 'Open' : 'Closed'}</span>
+                  <span className={trail.status === 1 ? 'trail-status open' : 'trail-status closed'}>
+                    {trail.status === 1 ? 'Open' : 'Closed'}
+                  </span>
                 </div>
               ))
             }
@@ -177,7 +205,9 @@ export default function SnowReportPage(props) {
               advancedGladeTrails.map(trail => (
                 <div className='pure-u-1 pure-u-md-1-3 trail'>
                   <span className='trail-name'>{trail.trailName}</span>
-                  <span className='trail-status'>{trail.status === 1 ? 'Open' : 'Closed'}</span>
+                  <span className={trail.status === 1 ? 'trail-status open' : 'trail-status closed'}>
+                    {trail.status === 1 ? 'Open' : 'Closed'}
+                  </span>
                 </div>
               ))
             }
@@ -190,7 +220,9 @@ export default function SnowReportPage(props) {
               expertGladeTrails.map(trail => (
                 <div className='pure-u-1 pure-u-md-1-3 trail'>
                   <span className='trail-name'>{trail.trailName}</span>
-                  <span className='trail-status'>{trail.status === 1 ? 'Open' : 'Closed'}</span>
+                  <span className={trail.status === 1 ? 'trail-status open' : 'trail-status closed'}>
+                    {trail.status === 1 ? 'Open' : 'Closed'}
+                  </span>
                 </div>
               ))
             }
@@ -209,7 +241,9 @@ export default function SnowReportPage(props) {
               easyParkTrails.map(trail => (
                 <div className='pure-u-1 pure-u-md-1-3 trail'>
                   <span className='trail-name'>{trail.trailName}</span>
-                  <span className='trail-status'>{trail.status === 1 ? 'Open' : 'Closed'}</span>
+                  <span className={trail.status === 1 ? 'trail-status open' : 'trail-status closed'}>
+                    {trail.status === 1 ? 'Open' : 'Closed'}
+                  </span>
                 </div>
               ))
             }
@@ -222,7 +256,9 @@ export default function SnowReportPage(props) {
               intermediateParkTrails.map(trail => (
                 <div className='pure-u-1 pure-u-md-1-3 trail'>
                   <span className='trail-name'>{trail.trailName}</span>
-                  <span className='trail-status'>{trail.status === 1 ? 'Open' : 'Closed'}</span>
+                  <span className={trail.status === 1 ? 'trail-status open' : 'trail-status closed'}>
+                    {trail.status === 1 ? 'Open' : 'Closed'}
+                  </span>
                 </div>
               ))
             }
@@ -237,6 +273,7 @@ export default function SnowReportPage(props) {
           <p>Some trails, including some glades and outer trails close at 3:30 pm, every day. Those trails are marked as such at the top of the trail. To view the full trail map, click here!</p>
         </div>
       </section>
+      <ScrollToTop />
     </div>
   );
 };

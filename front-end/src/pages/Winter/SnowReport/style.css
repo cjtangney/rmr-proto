@@ -118,7 +118,7 @@
 .trail-section div#park-advanced .pure-g .trail {
   max-width: 20rem;
   margin: 0.5rem;
-  padding: 3rem 1rem 3rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
   text-align: center;
   border: solid 1px black;
   display: flex;
@@ -139,6 +139,14 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.pure-g .trail .trail-status.closed {
+  color: red;
+}
+
+.pure-g .trail .trail-status.open {
+  color: green;
 }
 
 #winter-page-wrapper .trail-section #park-advanced {

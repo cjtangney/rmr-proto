@@ -1,0 +1,35 @@
+div#scroll-to-top {
+  padding: 1rem 1.5rem;
+  background-color: #e3782e;
+  color: white;
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  z-index: 10;
+}
+
+div#scroll-to-top:hover {
+  cursor: pointer;
+}
+
+div#scroll-to-top:hover > .arrow {
+  animation-duration: 1.5s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-name: bounce-up;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce-up {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  25% {
+    transform: translate3d(0, 15%, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -35%, 0);
+  }
+}

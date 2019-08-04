@@ -1,7 +1,7 @@
 nav#main-nav {
   height: 8rem;
   width: 100%;
-  background-color: orange;
+  background-color: #e3782e;
   color: white;
   margin: 0;
   position: -webkit-sticky;
@@ -46,7 +46,7 @@ nav#main-nav a {
 #main-nav > ul > li:hover {
   height: calc(100% - 4px);
   border-bottom: 4px solid white;
-  background-color: #cc8400;
+  background-color: #ff9639;
   transition: all linear 0.125s;
 }
 
@@ -87,7 +87,7 @@ nav#main-nav a {
 #main-nav::before {
   content: "Ragged Mountain Resort";
   width: 100%;
-  color: orange;
+  color: #e3782e;
   position: absolute;
   text-align: center;
   top: -47px;

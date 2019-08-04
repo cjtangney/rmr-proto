@@ -24,13 +24,15 @@
   -webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 0px 0px 20px 0px rgba(50,50,50,0.5);
   box-shadow: 0px 0px 20px 0px rgba(50,50,50,0.5);
+  position: relative;
+  z-index: 5;
 }
 
 #blog .side-bar {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  background-color: orange;
+  background-color: #e3782e;
 }
 
 #blog .side-bar .content {
@@ -100,13 +102,12 @@
 /* KEYNOTE */
 #keynote {
   position: relative;
-  z-index: -5;
 }
 #keynote .side-bar {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: orange; 
+  background-color: #e3782e; 
 }
 
 #keynote .side-bar .content {

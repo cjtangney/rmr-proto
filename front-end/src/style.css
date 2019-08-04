@@ -15,10 +15,37 @@ p.b, span.b {
 /* default link style */
 a {
   font-weight: 600;
-  color: #e46b00;
+  color: #e3782e;
   text-decoration: none;
 }
 
 a:hover {
   color: #ff9639;
 }
+
+/* shadow helper */
+.default-shadow {
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(50,50,50,0.5);
+  box-shadow: 0px 0px 20px 0px rgba(50,50,50,0.5);
+}
+
+/* trail marker icon font tweaks */
+i.fas.fa-circle.green {
+  color: green;
+}
+
+i.fas.fa-square.blue {
+  color: blue;
+}
+
+i.fas.fa-square.black {
+  color: black;
+  transform: rotate(45deg) translateX(-5px) translateY(5px);
+}
+
+
+/* colors */
+/* ragged-orange: #e3782e */ 
+/* light-orange: #ff9639 */
+/* dark-orange: #e46b00 */

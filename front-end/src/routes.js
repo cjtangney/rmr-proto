@@ -27,11 +27,14 @@ import BirchesPage from './pages/Dining/Birches';
 import HarvestCafePage from './pages/Dining/HarvestCafe';
 import StoneHearthPage from './pages/Dining/StoneHearth';
 
-export default function Routes(props) {
+export default function Routes(props) {  
   return (
     <div>
       <Route path='/' exact render={ () =>
-        <HomePage />
+        <HomePage 
+          lifts={props.data.lifts}
+          trails={props.data.trails}
+        />
       } />
       {/* BUY NOW */}
       <Route path='/SeasonPass' render={ () =>
@@ -42,7 +45,10 @@ export default function Routes(props) {
       } />
       {/* WINTER */}
       <Route path='/Winter/SnowReport' exact render={ () =>
-        <SnowReportPage />
+        <SnowReportPage 
+          lifts={props.data.lifts}
+          trails={props.data.trails}
+        />
       } />
       <Route path='/Rentals' exact render={ () =>
         <RentalsPage />

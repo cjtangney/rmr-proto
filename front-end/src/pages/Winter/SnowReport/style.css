@@ -1,0 +1,156 @@
+#snow-report-overview {
+  color: white;
+  background-color: #e46b00;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2%;
+  min-height: 15rem;
+}
+
+#snow-report-overview #label {
+  width: 100%;
+  text-align: center;
+}
+
+#snow-report-overview .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff9639;
+  margin: 1rem 2rem;
+}
+
+#snow-report-overview .report-text {
+  margin: 0 auto;
+  min-width: 30rem;
+  width: 60%;
+}
+
+#snow-report-overview .report-text p {
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+#snow-report-overview .header>p {
+  font-size: 200%;
+  margin-top: 0;
+}
+
+#snow-report-info {
+  color: #2a2a2a;
+}
+
+#snow-report-info .content {
+  margin: 3rem;
+}
+
+#snow-report-info > .content > p {
+  letter-spacing: 1px;
+}
+
+#winter-page-wrapper .trail-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+}
+
+#winter-page-wrapper .trail-section ~ .trail-section {
+  margin: 2rem 0;
+}
+
+#winter-page-wrapper .trail-section:last-child {
+  margin-bottom: 2rem;
+}
+
+#winter-page-wrapper .trail-section #label {
+  text-align: center;
+  background-color: #e3782e;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 115%;
+  color: white;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 8rem;
+  z-index: 5;
+}
+
+#winter-page-wrapper .trail-section #easy,
+#winter-page-wrapper .trail-section #intermediate,
+#winter-page-wrapper .trail-section #advanced,
+#winter-page-wrapper .trail-section #expert,
+#winter-page-wrapper .trail-section #glade-intermediate,
+#winter-page-wrapper .trail-section #glade-advanced,
+#winter-page-wrapper .trail-section #glade-expert,
+#winter-page-wrapper .trail-section #park-easy,
+#winter-page-wrapper .trail-section #park-advanced {
+  width: 80%;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+#winter-page-wrapper .trail-section #easy .pure-g,
+#winter-page-wrapper .trail-section #intermediate .pure-g,
+#winter-page-wrapper .trail-section #advanced .pure-g,
+#winter-page-wrapper .trail-section #expert .pure-g,
+#winter-page-wrapper .trail-section #glade-intermediate .pure-g,
+#winter-page-wrapper .trail-section #glade-advanced .pure-g,
+#winter-page-wrapper .trail-section #glade-expert .pure-g,
+#winter-page-wrapper .trail-section #park-easy .pure-g,
+#winter-page-wrapper .trail-section #park-advanced .pure-g {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0
+}
+
+.trail-section div#easy .pure-g .trail,
+.trail-section div#intermediate .pure-g .trail,
+.trail-section div#advanced .pure-g .trail,
+.trail-section div#expert .pure-g .trail,
+.trail-section div#glade-intermediate .pure-g .trail,
+.trail-section div#glade-advanced .pure-g .trail,
+.trail-section div#glade-expert .pure-g .trail,
+.trail-section div#park-easy .pure-g .trail,
+.trail-section div#park-advanced .pure-g .trail {
+  max-width: 20rem;
+  margin: 0.5rem;
+  padding: 3rem 1rem 3rem 1rem;
+  text-align: center;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  font-size: 115%;
+}
+
+.trail-section div#easy .pure-g .trail .trail-status,
+.trail-section div#intermediate .pure-g .trail .trail-status,
+.trail-section div#advanced .pure-g .trail .trail-status,
+.trail-section div#expert .pure-g .trail .trail-status,
+.trail-section div#glade-intermediate .pure-g .trail .trail-status,
+.trail-section div#glade-advanced .pure-g .trail .trail-status,
+.trail-section div#glade-expert .pure-g .trail .trail-status,
+.trail-section div#park-easy .pure-g .trail .trail-status,
+.trail-section div#park-advanced .pure-g .trail .trail-status {
+  margin-top: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#winter-page-wrapper .trail-section #park-advanced {
+  margin-bottom: 0;
+}
+
+#winter-page-wrapper > section > div > div.pure-g span.trails-header {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  font-size: 125%;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

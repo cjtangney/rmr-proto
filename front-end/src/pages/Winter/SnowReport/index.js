@@ -98,9 +98,7 @@ export default function SnowReportPage(props) {
     }
   });
 
-  const openLifts = lifts.filter(lift => 
-    lift.status.toLowerCase() === 'open'
-  );
+  const openLifts = lifts.filter(lift => lift.status.toLowerCase() === 'open');
 
   return (
     <div id='winter-page-wrapper'>

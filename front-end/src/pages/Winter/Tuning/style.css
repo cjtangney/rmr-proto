@@ -1,4 +1,4 @@
-.rentals-packages-header {
+.tuning-packages-header {
   text-align: center;
   background-color: #e46b00;
   letter-spacing: 2px;
@@ -8,22 +8,14 @@
   z-index: 5;
 }
 
-#rentals-packages > .pure-g {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  padding-bottom: 1rem;
-}
-
-#rentals-packages > p.description {
+#tuning-packages > p.description {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
   max-width: 60rem;
 }
 
-#rentals-packages .package {
+#tuning-packages .package {
   display: grid;
   margin-bottom: 2rem;
   margin-top: 1rem;
@@ -59,7 +51,7 @@
   flex: 2
 }
 
-#rentals-packages .package > h2 {
+#tuning-packages .package > h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0;
@@ -125,45 +117,37 @@ span.price > span.little-money-sign {
   width: 100%;
 }
 
-#rentals-packages .package.add-ons {
+#tuning-packages .package.add-ons {
   align-items: flex-start;
 }
 
-#rentals-packages .package.add-ons > h2 {
+#tuning-packages .package.add-ons > h2 {
   text-align: left;
   width: 95%;
   padding-left: 5%;
 }
 
-#rentals-packages .package > table,
-#rentals-packages .package > .content table {
+#tuning-packages .package.add-ons > table {
   width: 80%;
+  margin-left: 5%;
+  margin-right: 5%;
   border: none;
-  color: #3891A6;
 }
 
-#rentals-packages .package > table > tbody > tr,
-#rentals-packages .package > .content table > tbody > tr {
+#tuning-packages .package.add-ons > table > tbody > tr {
   border-bottom: #3891A6 solid 1px;
 }
 
-#rentals-packages .package > table > tbody > tr:last-child,
-#rentals-packages .package > .content table > tbody > tr:last-child {
+#tuning-packages .package.add-ons > table > tbody > tr:last-child {
   border-bottom: none;
 }
 
-#rentals-packages .package > table > tbody > tr > td,
-#rentals-packages .package > .content table > tbody > tr > td {
+#tuning-packages .package.add-ons > table > tbody > tr > td {
   border: none;
   padding: 1rem;
 }
 
-#rentals-packages .package > table > tbody > tr > td:first-child,
-#rentals-packages .package > .content table > tbody > tr > td:first-child {
+#tuning-packages .package.add-ons > table > tbody > tr > td:first-child {
   font-size: 150%;
   font-weight: 600;
-}
-
-#rentals-packages .package > .content table > tbody > tr > td:first-child {
-  font-size: 100%;
 }

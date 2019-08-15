@@ -55,6 +55,7 @@ export default function MainNav() {
           <ul className='sub text-center'>
             <Link to='/Winter/SnowReport'><li className='page-link'>Snow Report</li></Link>
             <Link to='/Rentals'><li className='page-link'>Rentals</li></Link>
+            <Link to='/Tuning-Repairs'><li className='page-link'>Tuning &amp; Repairs</li></Link>
             <Link to='/TerrainPark'><li className='page-link'>Terrain Park</li></Link>
             <Link to='/MountainSafety'><li className='page-link'>Mountain Safety</li></Link>
             <Link to='/Winter/TrailMap'><li className='page-link'>Trail Map</li></Link>

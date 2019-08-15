@@ -8,6 +8,7 @@ import LiftTicketsPage from './pages/Winter/LiftTickets';
 import MountainInfoPage from './pages/Winter/MountainInfo';
 import MountainSafetyPage from './pages/Winter/MountainSafety';
 import RentalsPage from './pages/Winter/Rentals';
+import TuningPage from './pages/Winter/Tuning';
 import SnowReportPage from './pages/Winter/SnowReport';
 import TerrainParkPage from './pages/Winter/TerrainPark';
 import TrailMapPage from './pages/Winter/TrailMap';
@@ -52,6 +53,9 @@ export default function Routes(props) {
       } />
       <Route path='/Rentals' exact render={ () =>
         <RentalsPage />
+      } />
+      <Route path='/Tuning-Repairs' exact render={ () =>
+        <TuningPage />
       } />
       <Route path='/TerrainPark' exact render={ () =>
         <TerrainParkPage />

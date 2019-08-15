@@ -1,5 +1,10 @@
 /* this file is for GLOBAL CSS ONLY */
 
+/* margin-helpers */
+.mx-auto {
+  margin: 0 auto;
+}
+
 /* text position helpers */
 .text-left { text-align: left; } 
 
@@ -49,3 +54,4 @@ i.fas.fa-square.black {
 /* ragged-orange: #e3782e */ 
 /* light-orange: #ff9639 */
 /* dark-orange: #e46b00 */
+/* rentals-blue:#3891a6*/

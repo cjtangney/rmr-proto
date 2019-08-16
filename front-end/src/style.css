@@ -17,6 +17,12 @@ p.b, span.b {
   font-weight: 600; 
 }
 
+/* default paragraph style */
+p {
+  letter-spacing: 1px;
+  color: #2a2a2a;
+}
+
 /* default link style */
 a {
   font-weight: 600;
@@ -54,4 +60,5 @@ i.fas.fa-square.black {
 /* ragged-orange: #e3782e */ 
 /* light-orange: #ff9639 */
 /* dark-orange: #e46b00 */
-/* rentals-blue:#3891a6*/
+/* rentals-blue:#3891a6 */
+/* terrain-green: #89973F */

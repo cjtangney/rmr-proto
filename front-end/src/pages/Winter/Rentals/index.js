@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ScrollToTop from '../../../components/ScrollToTop';
+
 import './style.css';
 
 /**
@@ -8,6 +10,9 @@ import './style.css';
  * 
  * consider a loader for while the pages are being loaded /
  * rendered
+ * 
+ * TODO:
+ *  ->> Component for different package layouts
  */
 
 export default function RentalsPage() {
@@ -119,6 +124,7 @@ export default function RentalsPage() {
           </div>
         </section>
       </div>
+      <ScrollToTop />
     </div>
   );
 };

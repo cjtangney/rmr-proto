@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ScrollToTop from '../../../components/ScrollToTop';
+
 import './style.css';
 
 export default function TuningPage() {
@@ -38,6 +40,7 @@ export default function TuningPage() {
           </div>
         </section>
       </div>
+      <ScrollToTop />
     </div>
   );
 };

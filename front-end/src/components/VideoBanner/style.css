@@ -1,0 +1,37 @@
+div#winter-page-wrapper.terrain-parks h1,
+div#winter-page-wrapper.terrain-parks h2,
+div#winter-page-wrapper.terrain-parks h3,
+div#winter-page-wrapper.terrain-parks h4,
+div#winter-page-wrapper.terrain-parks h5,
+div#winter-page-wrapper.terrain-parks h6 {
+  font-family: 'Allerta Stencil', sans-serif;
+  letter-spacing: 2px;
+}
+
+div#video-banner {
+  position: relative;
+  display: block;
+  height: 75vh;
+  width: 100%;
+}
+
+div#video-banner > video {
+  width: 100%;
+  height: 100%;
+  background-color: #2a2a2a;
+}
+
+div#video-banner > h1 {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: #89973F;
+  color: #2a2a2a;
+  font-size: 250%;
+}
+
+div#video-banner > h1.align-top {
+  top: 0;
+}

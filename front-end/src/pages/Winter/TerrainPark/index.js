@@ -3,6 +3,8 @@ import React from 'react';
 import ScrollToTop from '../../../components/ScrollToTop';
 import VideoBanner from '../../../components/VideoBanner';
 
+import './style.css';
+
 export default function TerrainParkPage() {
   return (
     <div id='winter-page-wrapper' className='terrain-parks'>

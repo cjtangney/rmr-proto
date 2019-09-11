@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lifts",
+      "handler": "Lifts.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lifts/count",
+      "handler": "Lifts.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lifts/:id",
+      "handler": "Lifts.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lifts",
+      "handler": "Lifts.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lifts/:id",
+      "handler": "Lifts.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lifts/:id",
+      "handler": "Lifts.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

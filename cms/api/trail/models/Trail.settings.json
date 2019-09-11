@@ -1,0 +1,48 @@
+{
+  "connection": "default",
+  "collectionName": "trails",
+  "info": {
+    "name": "trail",
+    "description": "One of the ski trails"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "trailName": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "status": {
+      "required": true,
+      "type": "boolean"
+    },
+    "difficulty": {
+      "required": true,
+      "enum": [
+        "Easy",
+        "Intermediate",
+        "Advanced",
+        "Expert"
+      ],
+      "default": "Easy",
+      "type": "enumeration"
+    },
+    "trailType": {
+      "required": true,
+      "enum": [
+        "Groomer",
+        "Glade",
+        "Park"
+      ],
+      "default": "Groomer",
+      "type": "enumeration"
+    }
+  }
+}

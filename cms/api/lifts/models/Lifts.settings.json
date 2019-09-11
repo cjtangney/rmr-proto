@@ -1,0 +1,38 @@
+{
+  "connection": "default",
+  "collectionName": "lifts",
+  "info": {
+    "name": "lifts",
+    "description": "Chairlifts at the resort"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "liftName": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "capacity": {
+      "type": "integer",
+      "default": "",
+      "required": true
+    },
+    "status": {
+      "required": true,
+      "enum": [
+        "Open",
+        "Closed",
+        "Hold"
+      ],
+      "default": "Closed",
+      "type": "enumeration"
+    }
+  }
+}

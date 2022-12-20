@@ -20,7 +20,7 @@
   "dependencies": {
     "@hapi/cryptiles": "4.2.0",
     "jquery": "^3.4.1",
-    "knex": "^0.19.4",
+    "knex": "^2.3.0",
     "lodash": "^4.17.15",
     "mem": "^4.0.0",
     "open": "^6.0.0",
